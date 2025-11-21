@@ -61,3 +61,108 @@ The accuracy of the implemented models is compared in the project. The CNN model
 
 Feel free to contribute to this project by submitting pull requests.
 
+# Web App
+
+
+
+-----
+
+# 🩺 Tuberculosis Detection Web App
+
+A Deep Learning-powered web application that detects Tuberculosis (TB) from chest X-ray images. Built with **Python**, **TensorFlow/Keras**, and **Streamlit**.
+
+## 📋 Table of Contents
+
+  - [Overview](https://www.google.com/search?q=%23overview)
+  - [Features](https://www.google.com/search?q=%23features)
+  - [Project Structure](https://www.google.com/search?q=%23project-structure)
+  - [Prerequisites](https://www.google.com/search?q=%23prerequisites)
+  - [Installation](https://www.google.com/search?q=%23installation)
+  - [Usage](https://www.google.com/search?q=%23usage)
+  - [Model Details](https://www.google.com/search?q=%23model-details)
+  - [Disclaimer](https://www.google.com/search?q=%23disclaimer)
+
+## 🧐 Overview
+
+This project uses a Convolutional Neural Network (CNN) trained on chest X-ray datasets to classify images as either **Normal** or **Tuberculosis**. The user interface is built using Streamlit, allowing for easy image uploading and instant prediction results.
+
+## ✨ Features
+
+  * **Simple Interface:** User-friendly drag-and-drop file uploader.
+  * **Real-time Prediction:** Instant classification using a pre-trained Keras model (`.h5`).
+  * **Visual Feedback:** Displays the uploaded X-ray and the prediction confidence score.
+  * **Confidence Scoring:** Shows the probability percentage of the detection.
+
+## 📂 Project Structure
+
+```bash
+tb_project/
+├── models/
+│   ├── 3-conv-CNN.h5          # The trained CNN model
+│   └── sgd_val_fmed_model.h5  # (Optional) Alternative model
+├── app.py                     # Main Streamlit application script
+├── requirements.txt           # List of dependencies
+└── README.md                  # Project documentation
+```
+
+## ⚙️ Prerequisites
+
+  * **Python 3.9** or **3.10** (Recommended for stability with TensorFlow).
+  * Basic understanding of terminal/command prompt usage.
+
+## 🛠️ Installation
+
+**⚠️ IMPORTANT NOTE FOR WINDOWS USERS:**
+To avoid `OSError: [Errno 2] No such file or directory` due to long file paths, place this project in a folder close to the root drive (e.g., `D:\tb_project` or `C:\projects\tb_app`). **Do not** nest it deep inside many subfolders.
+
+1.  **Clone or Download the Project**
+    Download the files and place them in a short directory path (e.g., `D:\tb_project`).
+
+2.  **Create a Virtual Environment**
+    Open your terminal/command prompt in the project folder and run:
+
+    ```bash
+    # Windows
+    python -m venv myenv
+
+    # Mac/Linux
+    python3 -m venv myenv
+    ```
+
+3.  **Activate the Environment**
+
+    ```bash
+    # Windows
+    .\myenv\Scripts\Activate
+
+    # Mac/Linux
+    source myenv/bin/activate
+    ```
+
+4.  **Install Dependencies**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## 🚀 Usage
+
+1.  Ensure your virtual environment is active (`(myenv)` should appear in your terminal).
+2.  Run the Streamlit app:
+    ```bash
+    streamlit run app.py
+    ```
+3.  A web browser will automatically open (usually at `http://localhost:8501`).
+4.  Upload a Chest X-ray image (`.jpg`, `.png`, or `.jpeg`) to see the result.
+
+## 🧠 Model Details
+
+The application uses a **Convolutional Neural Network (CNN)** saved as `3-conv-CNN.h5`.
+
+  * **Input Shape:** 150x150 pixels (RGB).
+  * **Output:** Binary classification (Normal vs. Tuberculosis).
+  * **Preprocessing:** Images are resized to 150x150 and pixel values are normalized to the [0, 1] range.
+
+## ⚠️ Disclaimer
+
+**This tool is for educational and research purposes only.** It is **not** a substitute for professional medical diagnosis. Always consult a qualified doctor or radiologist for medical advice.
